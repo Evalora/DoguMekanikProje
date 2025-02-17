@@ -603,7 +603,7 @@
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Genel font boyutunu küçült */
-        overflow-x:hidden; 
+        overflow-x:hidden;
     }
 
     .top-banner {
