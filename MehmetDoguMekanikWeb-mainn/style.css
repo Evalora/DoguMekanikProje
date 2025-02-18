@@ -220,7 +220,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
     gap: 15px; /* Li'ler arası boşluk */
 }
