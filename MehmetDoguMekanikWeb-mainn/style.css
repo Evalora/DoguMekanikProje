@@ -1711,10 +1711,16 @@ body {
         transform: translateX(-50%); /* Kartların toplam genişliğine göre ayarlayın */
     }
 }
+<<<<<<< HEAD
 /* Mobil uyumluluk */
 @media (max-width: 768px) {
     .promo-grid {
         flex-direction: column; /* Küçük ekranlarda her kart bir altına yerleşir */
+=======
+@media screen and (max-width: 768px) {
+    .promo-section {
+        display: none;
+>>>>>>> Seyhmus
     }
 }
 
