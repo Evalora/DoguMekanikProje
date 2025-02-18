@@ -5,10 +5,9 @@
     font-family: Arial, sans-serif;
 }
 body {
-    font-family: sans-serif;
     overflow-x: hidden;
-    
-  }
+}
+
 .top-banner {
     background-color: #EF202F;
     color: white;
@@ -1711,16 +1710,10 @@ body {
         transform: translateX(-50%); /* Kartların toplam genişliğine göre ayarlayın */
     }
 }
-<<<<<<< HEAD
 /* Mobil uyumluluk */
 @media (max-width: 768px) {
     .promo-grid {
         flex-direction: column; /* Küçük ekranlarda her kart bir altına yerleşir */
-=======
-@media screen and (max-width: 768px) {
-    .promo-section {
-        display: none;
->>>>>>> Seyhmus
     }
 }
 
