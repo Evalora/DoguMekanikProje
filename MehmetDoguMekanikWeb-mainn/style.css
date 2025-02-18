@@ -4,7 +4,11 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    
+  }
 .top-banner {
     background-color: #EF202F;
     color: white;
@@ -393,6 +397,284 @@
         transform: none;
     }
 }
+/* Hamburger Icon */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ef0616; /* Daha koyu bir renk */
+    margin: 5px 0;
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+/* Menu Window */
+.menu-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #002842; /* Daha açık bir renk */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1); /* Daha hafif bir gölge */
+    z-index: 10001;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px; /* Köşeleri yuvarlat */
+}
+
+.menu-window.show {
+    transform: translateX(0);
+}
+
+.menu-window a {
+    padding: 15px 20px; /* Daha fazla dolgu */
+    text-decoration: none;
+    display: block;
+    color: #e9ecf0; /* Daha koyu bir renk */
+    font-family: 'Roboto', sans-serif; /* Modern bir yazı tipi */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efektleri */
+    border-bottom: 1px solid #eee; /* Ayırıcı çizgi */
+}
+
+.menu-window a:hover {
+    background-color: #f8f9fa; /* Daha açık bir renk */
+    color: #007bff; /* Vurgu rengi */
+}
+
+/* Submenus */
+.submenu {
+    display: none;
+    margin-left: 20px;
+    background-color: #002842; /* Alt menü için farklı bir renk */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1); /* Daha hafif bir gölge */
+    padding: 5px 0; /* İç dolgu */
+}
+
+.menu-window a:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    padding: 10px 20px; /* Daha az dolgu */
+    color: #fbfbfb; /* Daha koyu bir renk */
+}
+
+.submenu a:hover {
+    background-color: #e9ecef; /* Daha açık bir renk */
+    color: #007bff; /* Vurgu rengi */
+}
+
+
+/* Close Icon */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff; /* Daha koyu bir renk */
+}
+
+/* Hamburger Icon Transition */
+.menu-icon:hover .bar {
+    background-color: #007bff; /* Vurgu rengi */
+}
+
+  /* ... diğer stiller ... */
+
+/* Ürünler Menüsü */
+#urunlerMenu {
+    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
+  }
+  
+  /* Alt Menü (Başlangıçta Gizli) */
+  #urunlerAltMenu {
+    display: none; /* veya visibility: hidden; */
+    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
+  }
+  
+  /* Alt Menü (Görünür Olduğunda) */
+  #urunlerAltMenu.show {
+    display: block; /* veya visibility: visible; */
+  }
+  
+
+
+/* İletişim Menüsü */
+#iletisimMenu {
+    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
+  }
+  
+  /* Alt Menü (Başlangıçta Gizli) */
+  #iletisimAltMenu {
+    display: none; /* veya visibility: hidden; */
+    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
+  }
+  
+  /* Alt Menü (Görünür Olduğunda) */
+  #iletisimAltMenu.show {
+    display: block; /* veya visibility: visible; */
+  }
+  
+
+
+/* Hizmetler Menüsü */
+#hizmetlerMenu {
+    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
+  }
+  
+  /* Alt Menü (Başlangıçta Gizli) */
+  #hizmetlerAltMenu {
+    display: none; /* veya visibility: hidden; */
+    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
+  }
+  
+  /* Alt Menü (Görünür Olduğunda) */
+  #hizmetlerAltMenu.show {
+    display: block; /* veya visibility: visible; */
+  }
+  
+
+  /* Genel stiller (isteğe bağlı) */
+
+  
+  /* Kurumsal Menüsü */
+  #kurumsalMenu {
+    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
+  }
+  
+  /* Alt Menü (Başlangıçta Gizli) */
+  #kurumsalAltMenu {
+    display: none; /* veya visibility: hidden; */
+    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
+  }
+  
+  /* Alt Menü (Görünür Olduğunda) */
+  #kurumsalAltMenu.show {
+    display: block; /* veya visibility: visible; */
+  }
+  
+  /* Alt Menü Öğeleri */
+  #kurumsalAltMenu a {
+    display: block; /* Alt menü öğelerini alt alta sıralar */
+    padding: 10px; /* Öğelerin iç boşluğu */
+    text-decoration: none; /* Bağlantıların alt çizgisini kaldırır */
+    color: #ffffff; /* Metin rengi */
+  }
+  
+  /* Alt Menü Öğeleri (Üzerine Gelindiğinde) */
+  #kurumsalAltMenu a:hover {
+    background-color: #f0f0f0; /* Arka plan rengi */
+  }
+
+
+  /* Mobil Cihazlar (Küçük Ekranlar) */
+@media (max-width: 480px) {
+    .hamburger-menu {
+        display: flex; /* Hamburger menüsünü göster */
+        order: -1; /* Hamburger menüsünü sola al */
+    }
+
+    .logo {
+        order: 0; /* Logoyu ortada konumlandır */
+        margin: 0 auto; /* Ortaya almak için margin ayarları */
+    }
+
+    .header-contact,
+    .header-right {
+        display: none; /* Diğer sağdaki öğeleri gizle */
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .contact-btn {
+        position: absolute;
+        right: 10px; /* Teklif al butonunu sağa hizala */
+    }
+}
+
+/* Mobil Cihazlar (Büyük Ekranlar) ve Tabletler */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .hamburger-menu {
+        display: flex; /* Hamburger menüsünü göster */
+        order: -1; /* Hamburger menüsünü sola al */
+    }
+
+    .logo {
+        order: 0; /* Logoyu ortada konumlandır */
+        margin: 0 auto; /* Ortaya almak için margin ayarları */
+    }
+
+    .header-contact,
+    .header-right {
+        display: none; /* Diğer sağdaki öğeleri gizle */
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .contact-btn {
+        position: absolute;
+        right: 10px; /* Teklif al butonunu sağa hizala */
+    }
+}
+
+/* Masaüstü Cihazlar */
+@media (min-width: 1025px) {
+    .hamburger-menu {
+        display: none; /* Hamburger menüsünü gizle */
+    }
+
+    .nav-menu {
+        display: block; /* Menü öğelerini göster */
+    }
+
+    .top-container {
+        justify-content: flex-start; /* Masaüstü düzeninde sola hizala */
+        align-items: center;
+    }
+
+    .header-right {
+        display: flex;
+        justify-content: flex-end; /* Sağdaki öğeleri sağa hizala */
+        align-items: center;
+    }
+
+    .logo {
+        order: 0; /* Logoyu sola al */
+        margin-right: auto; /* Solda tut */
+    }
+
+    .social-media {
+        margin-right: 20px; /* Sosyal medya ikonları ile teklif al arasında boşluk */
+        margin-left: 120px;
+    }
+
+    .contact-btn {
+        order: 1; /* Teklif al butonunu sağa al */
+      
+        
+        
+    }
+    .header-contact{
+        margin-right: 120px;
+    }
+}
+    
 .slider {
     position: relative;
     margin: 20px 0;
@@ -635,11 +917,37 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: 300px;
+    width: 300px; /* Kart genişliği sabit */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçerikleri eşit dağıt */
+    min-height: 400px; /* Kart yüksekliği sabit */
 }
+
+.product-card .price {
+    font-size: 20px;
+    color: #EF202F;
+    margin-top: auto; /* Fiyatı en alta sabitler */
+}
+
+.product-card .cta-button {
+    background-color: #002842;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Butonu sabit tutmak için */
+}
+
+.product-card .cta-button:hover {
+    background-color: #EF202F;
+}
+
 
 .product-card:hover {
     transform: translateY(-10px);
@@ -659,26 +967,27 @@
     color: #002842;
 }
 
-.product-card .price {
-    font-size: 20px;
-    color: #EF202F;
-    margin-bottom: 15px;
+
+
+
+
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .product-grid {
+        justify-content: space-between; /* Kartlar arasında eşit boşluk bırak */
+    }
+
+    .product-card {
+        width: calc(50% - 10px); /* 2 kart yan yana, arada boşluk bırak */
+    }
 }
 
-.product-card .cta-button {
-    background-color: #002842;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* Küçük ekranlarda tek sütun olacak */
+    }
 }
-
-.product-card .cta-button:hover {
-    background-color: #EF202F;
-}
-
 .promo-section {
     padding: 50px 0;
     background: #f8f9fa;
@@ -770,6 +1079,39 @@
     font-size: 16px;
     color: #555;
 }
+/* Mobil uyumluluk ayarları */
+@media screen and (max-width: 768px) {
+    .promo-section {
+        display: none;
+    }
+
+    .icon-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .icon-card {
+        max-width: 150px;
+        text-align: center;
+    }
+
+    .icon-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-card h3 {
+        font-size: 16px;
+    }
+
+    .icon-card p {
+        font-size: 12px;
+    }
+}
+
 .custom-slider-wrapper {
     width: 489px;
     height: 335px;
@@ -878,207 +1220,207 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-.project-showcase {
-    padding: 50px 0;
-    background: #f8f9fa;
-}
-
-.project-container {
-    max-width: 1329px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 0 15px;
-}
-
-
-.section-divider {
-    padding: 40px 0;
-    background: #f8f9fa;
-}
-
-.divider-content {
-    max-width: 1329px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.divider-line {
-    height: 2px;
-    background: linear-gradient(to right, transparent, #002842, transparent);
-    flex: 1;
-}
-
-.divider-icon {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #002842;
-    font-size: 16px;
-    padding: 0 20px;
-}
-
-.divider-icon i {
-    font-size: 14px;
-    color: #EF202F;
-}
-
-.divider-icon span {
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* Stil 1 - Dalga Efektli */
-.divider-wave {
-    position: relative;
-    height: 60px;
-    background: linear-gradient(45deg, #002842, #1a4c6d, #2d6f98, #3f93c3);
-    overflow: hidden;
-}
-
-.wave-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-    background-size: 100% 100%;
-}
-
-.wave-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-}
-
-/* Stil 2 - Gradient Efektli */
-.divider-gradient {
-    padding: 30px 0;
-    text-align: center;
-}
-
-.gradient-line {
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #FF416C 25%, 
-        #FF4B2B 50%, 
-        #FF416C 75%, 
-        transparent 100%
-    );
-    position: relative;
-    max-width: 1329px;
-    margin: 0 auto;
-}
-
-.gradient-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 0 20px;
-    color: #002842;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-/* Stil 3 - Modern Çizgili */
-.divider-modern {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
-    max-width: 1329px;
-    margin: 0 auto;
-}
-
-.modern-line {
-    height: 2px;
-    flex: 1;
-    background: linear-gradient(90deg, #002842, #EF202F);
-}
-
-.modern-line.left {
-    background: linear-gradient(90deg, transparent, #002842);
-}
-
-.modern-line.right {
-    background: linear-gradient(90deg, #EF202F, transparent);
-}
-
-.modern-circle {
-    width: 40px;
-    height: 40px;
-    background: white;
-    border: 2px solid #002842;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 20px;
-    color: #EF202F;
-    animation: pulse 2s infinite;
-}
-
-/* Stil 4 - Animasyonlu */
-.divider-animated {
-    padding: 30px 0;
-    text-align: center;
-}
-
-.animated-dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.animated-dots span {
-    width: 8px;
-    height: 8px;
-    background: #002842;
-    border-radius: 50%;
-    animation: bounce 1.4s infinite ease-in-out both;
-}
-
-.animated-dots span:nth-child(1) {
-    animation-delay: -0.32s;
-}
-
-.animated-dots span:nth-child(2) {
-    animation-delay: -0.16s;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(239, 32, 47, 0.4);
+    .project-showcase {
+        padding: 50px 0;
+        background: #f8f9fa;
     }
-    70% {
-        box-shadow: 0 0 0 10px rgba(239, 32, 47, 0);
+    
+    .project-container {
+        max-width: 1329px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 0 15px;
     }
-    100% {
-        box-shadow: 0 0 0 0 rgba(239, 32, 47, 0);
+    
+    
+    .section-divider {
+        padding: 40px 0;
+        background: #f8f9fa;
     }
-}
-
-@keyframes bounce {
-    0%, 80%, 100% {
-        transform: scale(0);
+    
+    .divider-content {
+        max-width: 1329px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
-    40% {
-        transform: scale(1);
+    
+    .divider-line {
+        height: 2px;
+        background: linear-gradient(to right, transparent, #002842, transparent);
+        flex: 1;
     }
-}
+    
+    .divider-icon {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #002842;
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .divider-icon i {
+        font-size: 14px;
+        color: #EF202F;
+    }
+    
+    .divider-icon span {
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
+    /* Stil 1 - Dalga Efektli */
+    .divider-wave {
+        position: relative;
+        height: 60px;
+        background: linear-gradient(45deg, #002842, #1a4c6d, #2d6f98, #3f93c3);
+        overflow: hidden;
+    }
+    
+    .wave-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+        background-size: 100% 100%;
+    }
+    
+    .wave-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+    }
+    
+    /* Stil 2 - Gradient Efektli */
+    .divider-gradient {
+        padding: 30px 0;
+        text-align: center;
+    }
+    
+    .gradient-line {
+        height: 3px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            #FF416C 25%, 
+            #FF4B2B 50%, 
+            #FF416C 75%, 
+            transparent 100%
+        );
+        position: relative;
+        max-width: 1329px;
+        margin: 0 auto;
+    }
+    
+    .gradient-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 0 20px;
+        color: #002842;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    /* Stil 3 - Modern Çizgili */
+    .divider-modern {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        max-width: 1329px;
+        margin: 0 auto;
+    }
+    
+    .modern-line {
+        height: 2px;
+        flex: 1;
+        background: linear-gradient(90deg, #002842, #EF202F);
+    }
+    
+    .modern-line.left {
+        background: linear-gradient(90deg, transparent, #002842);
+    }
+    
+    .modern-line.right {
+        background: linear-gradient(90deg, #EF202F, transparent);
+    }
+    
+    .modern-circle {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border: 2px solid #002842;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px;
+        color: #EF202F;
+        animation: pulse 2s infinite;
+    }
+    
+    /* Stil 4 - Animasyonlu */
+    .divider-animated {
+        padding: 30px 0;
+        text-align: center;
+    }
+    
+    .animated-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .animated-dots span {
+        width: 8px;
+        height: 8px;
+        background: #002842;
+        border-radius: 50%;
+        animation: bounce 1.4s infinite ease-in-out both;
+    }
+    
+    .animated-dots span:nth-child(1) {
+        animation-delay: -0.32s;
+    }
+    
+    .animated-dots span:nth-child(2) {
+        animation-delay: -0.16s;
+    }
+    
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(239, 32, 47, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(239, 32, 47, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(239, 32, 47, 0);
+        }
+    }
+    
+    @keyframes bounce {
+        0%, 80%, 100% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(1);
+        }
+    }
 .main-footer {
     background: #002842;
     color: white;
@@ -1281,15 +1623,12 @@
 }
 
 .promo-section {
-    padding: 50px 20px;
-    background-color:white ;
+    padding: 50px 0;  /* Yalnızca üst ve alt padding bırakıyoruz */
+    background-color: white;
     text-align: center;
-    color: white;
-    overflow: hidden; /* Taşan içeriği gizle */
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom:40px ;
-    
+    color: black; /* Yazı rengini görünür yapmak için siyah */
+    margin: 0; /* Marginleri sıfırlıyoruz */
+    width: 100%; /* Ekran genişliğini kapsasın */
 }
 
 .promo-section h2 {
@@ -1302,12 +1641,15 @@
 .promo-container {
     overflow: hidden; /* Taşan içeriği gizle */
     position: relative;
+    width: 100%; /* Container genişliği %100 */
 }
 
 .promo-grid {
     display: flex;
     gap: 20px;
-    animation: scroll 20s linear infinite; /* Sonsuz kaydırma animasyonu */
+    animation: scroll 20s linear infinite;
+    width: 100%; /* Grid tam genişlik alacak */
+    justify-content: space-between; /* Öğeler arasındaki boşlukları eşit bırak */
 }
 
 .promo-card {
@@ -1369,6 +1711,13 @@
         transform: translateX(-50%); /* Kartların toplam genişliğine göre ayarlayın */
     }
 }
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .promo-grid {
+        flex-direction: column; /* Küçük ekranlarda her kart bir altına yerleşir */
+    }
+}
+
 
 .promo-cards {
     display: grid;
@@ -1588,203 +1937,7 @@
 
 
 
-/* Hamburger Icon */
-.hamburger-menu {
-    position: relative;
-    display: inline-block;
-}
 
-.menu-icon {
-    cursor: pointer;
-    padding: 10px;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #ef0616; /* Daha koyu bir renk */
-    margin: 5px 0;
-    transition: background-color 0.3s ease; /* Geçiş efekti */
-}
-
-/* Menu Window */
-.menu-window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 300px;
-    background-color: #002842; /* Daha açık bir renk */
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1); /* Daha hafif bir gölge */
-    z-index: 10001;
-    overflow-y: auto;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    border-radius: 10px; /* Köşeleri yuvarlat */
-}
-
-.menu-window.show {
-    transform: translateX(0);
-}
-
-.menu-window a {
-    padding: 15px 20px; /* Daha fazla dolgu */
-    text-decoration: none;
-    display: block;
-    color: #e9ecf0; /* Daha koyu bir renk */
-    font-family: 'Roboto', sans-serif; /* Modern bir yazı tipi */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efektleri */
-    border-bottom: 1px solid #eee; /* Ayırıcı çizgi */
-}
-
-.menu-window a:hover {
-    background-color: #f8f9fa; /* Daha açık bir renk */
-    color: #007bff; /* Vurgu rengi */
-}
-
-/* Submenus */
-.submenu {
-    display: none;
-    margin-left: 20px;
-    background-color: #002842; /* Alt menü için farklı bir renk */
-    border-radius: 5px; /* Köşeleri yuvarlat */
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1); /* Daha hafif bir gölge */
-    padding: 5px 0; /* İç dolgu */
-}
-
-.menu-window a:hover .submenu {
-    display: block;
-}
-
-.submenu a {
-    padding: 10px 20px; /* Daha az dolgu */
-    color: #fbfbfb; /* Daha koyu bir renk */
-}
-
-.submenu a:hover {
-    background-color: #e9ecef; /* Daha açık bir renk */
-    color: #007bff; /* Vurgu rengi */
-}
-
-
-/* Close Icon */
-.close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #ffffff; /* Daha koyu bir renk */
-}
-
-/* Hamburger Icon Transition */
-.menu-icon:hover .bar {
-    background-color: #007bff; /* Vurgu rengi */
-}
-
-  /* ... diğer stiller ... */
-
-/* Ürünler Menüsü */
-#urunlerMenu {
-    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
-  }
-  
-  /* Alt Menü (Başlangıçta Gizli) */
-  #urunlerAltMenu {
-    display: none; /* veya visibility: hidden; */
-    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
-  }
-  
-  /* Alt Menü (Görünür Olduğunda) */
-  #urunlerAltMenu.show {
-    display: block; /* veya visibility: visible; */
-  }
-  
-  /* ... diğer stiller ... */
-
-
-
-
-
-  /* ... diğer stiller ... */
-
-/* İletişim Menüsü */
-#iletisimMenu {
-    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
-  }
-  
-  /* Alt Menü (Başlangıçta Gizli) */
-  #iletisimAltMenu {
-    display: none; /* veya visibility: hidden; */
-    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
-  }
-  
-  /* Alt Menü (Görünür Olduğunda) */
-  #iletisimAltMenu.show {
-    display: block; /* veya visibility: visible; */
-  }
-  
-
-
-
-  /* ... diğer stiller ... */
-
-/* Hizmetler Menüsü */
-#hizmetlerMenu {
-    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
-  }
-  
-  /* Alt Menü (Başlangıçta Gizli) */
-  #hizmetlerAltMenu {
-    display: none; /* veya visibility: hidden; */
-    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
-  }
-  
-  /* Alt Menü (Görünür Olduğunda) */
-  #hizmetlerAltMenu.show {
-    display: block; /* veya visibility: visible; */
-  }
-  
-  /* ... diğer stiller ... */
-
-
-
-  /* Genel stiller (isteğe bağlı) */
-body {
-    font-family: sans-serif;
-  }
-  
-  /* Kurumsal Menüsü */
-  #kurumsalMenu {
-    cursor: pointer; /* Tıklanabilir olduğunu belirtmek için imleci değiştir */
-  }
-  
-  /* Alt Menü (Başlangıçta Gizli) */
-  #kurumsalAltMenu {
-    display: none; /* veya visibility: hidden; */
-    margin-left: 20px; /* İç içe görünüm için soldan boşluk (isteğe bağlı) */
-  }
-  
-  /* Alt Menü (Görünür Olduğunda) */
-  #kurumsalAltMenu.show {
-    display: block; /* veya visibility: visible; */
-  }
-  
-  /* Alt Menü Öğeleri */
-  #kurumsalAltMenu a {
-    display: block; /* Alt menü öğelerini alt alta sıralar */
-    padding: 10px; /* Öğelerin iç boşluğu */
-    text-decoration: none; /* Bağlantıların alt çizgisini kaldırır */
-    color: #ffffff; /* Metin rengi */
-  }
-  
-  /* Alt Menü Öğeleri (Üzerine Gelindiğinde) */
-  #kurumsalAltMenu a:hover {
-    background-color: #f0f0f0; /* Arka plan rengi */
-  }
-
-
-  
 
 
 
@@ -1852,6 +2005,14 @@ p {
 }
 
 /* RESPONSIVE TASARIM */
+
+.top-container {
+    display: flex;
+    justify-content: space-between; /* Solda hamburger menüsü, sağda logo */
+    align-items: center;
+    width: 100%;
+}
+
 
 /* Tabletler için (2 sütun) */
 @media (max-width: 1024px) {

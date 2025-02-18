@@ -21,14 +21,22 @@
     <div class="top-banner">
         İstanbul İçi Tüm Sevkiyatlar Ertesi Gün Teslim. Kargo Sadece 150 TL!
     </div>
-
+    
     <header class="header">
+        <div class="top-container">
+        <div class="hamburger-menu">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
         <div class="logo">
             <a href="/">
                 <img src="images/dogu-logo-white.png" alt="Logo">
             </a>
         </div>
-
+            
         <div class="header-contact">
             <div class="contact-item">
                 <i class="fas fa-phone-alt"></i>
@@ -65,17 +73,63 @@
 
         
 
-            <a href="mailto:info@sirketiniz.com?subject=Teklif Talebi&body=Merhaba, teklif almak istiyorum." class="contact-btn">
+            <a href="#" class="contact-btn">
                 <i class="fas fa-comments"></i>
                 Teklif Al
             </a>
         </div>
+       
     </header>
+   
 
+    <div class="menu-window" id="menuWindow">
+        <span class="close-icon" onclick="toggleMenu()">&times;</span>
+        <a href="#">Ana Sayfa</a>
+        
+        <a href="#" id="hizmetlerMenu">Hizmetler
+            <div class="submenu" id="hizmetlerAltMenu">
+                <a href="#">Proje Yönetimi</a>
+                <a href="#">Danışmanlık</a>
+                <a href="#">Uygulama</a>
+                <a href="#">Endüstriyel</a>
+                <a href="#">Kurumsal</a>
+                <a href="#">Özel Projeler</a>
+            </div>
+        </a>
+        <a href="#" id="kurumsalMenu">Kurumsal
+            <div class="submenu" id="kurumsalAltMenu">
+              <a href="#">Şirket Profili</a>
+              <a href="#">Vizyon & Misyon</a>
+              <a href="#">Yönetim Ekibi</a>
+              <a href="#">Değerlerimiz</a>
+              <a href="#">Kalite Politikası</a>
+            </div>
+          </a>
+        </a>
+        <a href="#" id="urunlerMenu">Ürünler
+            <div class="submenu" id="urunlerAltMenu">
+                <a href="#">Ürün 1</a>
+                <a href="#">Ürün 2</a>
+                <a href="#">Ürün 3</a>
+            </div>
+        </a>
+        <a href="#" id="iletisimMenu">İletişim
+            <div class="submenu" id="iletisimAltMenu">
+                <a href="#">Telefon</a>
+                <a href="#">E-posta</a>
+                <a href="#">Adres</a>
+
+            </div>
+            <a href="#" id="hakkimizdaMenu">Hakkımızda</a>
+        </a>
+
+    </div>
+  
     <nav class="nav-menu">
         <ul>
             <li><a href="#"><i class="fas fa-home"></i> Ana Sayfa</a></li>
             <li><a href="#"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+            
           
             <li class="nav-item">
                 <a href="#"><i class="fas fa-building"></i> Kurumsal <i class="fas fa-chevron-down"></i></a>
@@ -168,13 +222,13 @@
                 <div class="custom-slider-wrapper">
                     <div class="custom-slider-container" id="customSlider">
                         <div class="custom-slide"><img
-                                src="/MehmetDoguMekanikWeb-mainn/images/leo1.jpg"
+                                src="/DoguMekanikProje/MehmetDoguMekanikWeb-mainn/images/leo1.jpg"
                                 alt="Slide 1"></div>
                         <div class="custom-slide"><img
-                                src="/MehmetDoguMekanikWeb-mainn/images/leo2.jpg"
+                                src="/DoguMekanikProje/MehmetDoguMekanikWeb-mainn/images/leo2.jpg"
                                 alt="Slide 2"></div>
                         <div class="custom-slide"><img
-                                src="/MehmetDoguMekanikWeb-mainn/images/leo3.jpg"
+                                src="/DoguMekanikProje/MehmetDoguMekanikWeb-mainn/images/leo3.jpg"
                                 alt="Slide 3"></div>
                     </div>
                     <div class="custom-slider-buttons">
@@ -307,6 +361,7 @@
         </div>
     </div>
 
+   
     <section class="project-showcase">
         <div class="project-container">
             <!-- Proje Kartı 1 -->

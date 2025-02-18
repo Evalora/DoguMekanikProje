@@ -96,12 +96,18 @@ function toggleMenu() {
     menuWindow.classList.toggle("show");
   }
 
+  
+
+
 
   document.getElementById("urunlerMenu").addEventListener("click", function(event) {
     event.preventDefault(); // Bağlantı davranışını engelle (sayfa yenilenmesini önler)
     const urunlerAltMenu = document.getElementById("urunlerAltMenu");
     urunlerAltMenu.classList.toggle("show"); // "show" sınıfını ekle/kaldır
   });
+
+  
+
 
 
 
@@ -128,6 +134,14 @@ document.getElementById("kurumsalMenu").addEventListener("click", function(event
     kurumsalAltMenu.classList.toggle("show"); // "show" sınıfını ekle/kaldır
   });
 
- 
+
+  function toggleMenu() {
+    const menuWindow = document.querySelector('.menu-window');
+    menuWindow.classList.toggle('show');  // Menü açma/kapama
+}
+
+
+
+  
 
   
