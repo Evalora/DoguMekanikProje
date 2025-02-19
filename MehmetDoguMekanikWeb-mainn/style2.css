@@ -1,6 +1,6 @@
 /* Ana Sayfa - Proje Listesi */
 .project-list {
-    padding: 50px;
+    padding: 50px 20px;
     background-color: #f8f9fa;
 }
 
@@ -12,7 +12,7 @@
 .project-title {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .project-card {
@@ -41,6 +41,8 @@
     text-decoration: none;
     border-radius: 5px;
     font-size: 1rem;
+    display: inline-block;
+    text-align: center;
 }
 
 .project-btn:hover {
@@ -49,7 +51,7 @@
 
 /* Proje Detay Sayfası */
 .project-details {
-    padding: 50px;
+    padding: 50px 20px;
     background-color: #f8f9fa;
 }
 
@@ -63,6 +65,7 @@
 .project-text {
     flex: 1;
     padding-right: 20px;
+    min-width: 300px;
 }
 
 .project-text h2 {
@@ -80,6 +83,8 @@
 .project-image {
     flex: 1;
     max-width: 500px;
+    min-width: 300px;
+    text-align: center;
 }
 
 .project-image img {
@@ -87,4 +92,21 @@
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .project-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-text {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .project-btn {
+        width: 100%;
+    }
 }
