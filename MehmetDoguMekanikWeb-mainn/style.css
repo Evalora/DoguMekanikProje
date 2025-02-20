@@ -1500,6 +1500,9 @@ body {
     height: 2px;
     background: #EF202F;
 }
+.footer-col p{
+    color: white;
+}
 
 .footer-links {
     list-style: none;
