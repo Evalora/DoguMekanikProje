@@ -282,28 +282,38 @@
     <section class="promo-cards">
         <div class="promo-card-item" style="background-color: #EF202F;">
             <h3>Betonerme Malzemeleri</h3>
-            <p></p>
-            <a href="#" class="promo-button">İncele</a>
+           <!--<p>İnşaat sektöründe kullanılan temel malzemeler.</p>--> 
+            <a href="#" class="promo-button" data-target="betonerme">İncele</a>
         </div>
 
         <div class="promo-card-item" style="background-color: #002842;">
             <h3>Yapı Kimyasalları</h3>
-            <p></p>
-            <a href="#" class="promo-button">İncele</a>
+           <!--<p>İnşaatın dayanıklılığını artıran kimyasallar.</p>--> 
+            <a href="#" class="promo-button" data-target="yapikimyasallari">İncele</a>
         </div>
 
         <div class="promo-card-item" style="background-color: #4CAF50;">
             <h3>İnşaat Ekipmanları</h3>
-            <p></p>
-            <a href="#" class="promo-button">İncele</a>
+            <!--<p>İnşaat işleriniz için gerekli ekipmanlar.</p>-->
+            <a href="#" class="promo-button" data-target="insaat">İncele</a>
         </div>
 
         <div class="promo-card-item" style="background-color: purple;">
             <h3>Konteyner</h3>
-            <p></p>
-            <a href="#" class="promo-button">İncele</a>
+         <!--  <p>Taşınabilir yapılar için konteyner çözümleri.</p>--> 
+            <a href="#" class="promo-button" data-target="konteyner">İncele</a>
         </div>
     </section>
+
+    <!-- Detay Kartı -->
+    <div id="detail-card" class="detail-card">
+        <div class="detail-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="detail-title"></h2>
+            <img id="detail-image" src="" alt="Ürün Resmi">
+            <p id="detail-description"></p>
+        </div>
+    </div>
 
     <section class="featured-products">
         <div class="section-header">
@@ -323,26 +333,26 @@
             <div class="product-card">
                 <img src="images/dogu-logo-white.png" alt="Ürün 1">
                 <h3>Modern Batarya Musluk</h3>
-              
+                <p class="price">₺499,99</p>
                 <a href="#" class="cta-button">İncele</a>
             </div>
             <div class="product-card">
                 <img src="images/slider-image/lotus_kadın.jpeg"
                     alt="Ürün 2">
                 <h3>Lüks Küvet</h3>
-               
+                <p class="price">₺1.999,99</p>
                 <a href="#" class="cta-button">İncele</a>
             </div>
             <div class="product-card">
                 <img src="images/leo3.jpg" alt="Ürün 3">
                 <h3>Seramik Lavabo</h3>
-                
+                <p class="price">₺799,99</p>
                 <a href="#" class="cta-button">İncele</a>
             </div>
             <div class="product-card">
                 <img src="images/leo5.jpg" alt="Ürün 3">
                 <h3>Seramik Lavabo</h3>
-               
+                <p class="price">₺799,99</p>
                 <a href="#" class="cta-button">İncele</a>
             </div>
         </div>
@@ -505,24 +515,42 @@
         <div class="footer-top">
             <div class="footer-container">
                 <!-- Logo ve Sosyal Medya -->
-                <div class="footer-col brand-colhttps://www.instagram.com/dogumekanik21/">
+                <div class="footer-col brand-col">
                     <img  width="180" height="80" src="/MehmetDoguMekanikWeb-mainn/images/icon/favIcon/şirket_amblem.png">
                     <p class="footer-desc">20 yılı aşkın tecrübemizle elektrik ve otomasyon sektöründe profesyonel
                         çözümler sunuyoruz.</p>
                     <div class="social-links">
-                        
-                        <a href="https://www.facebook.com/share/15i973zxMP/"><i class="fab fa-facebook"></i></a>
-                        
-                        <a href="https://www.instagram.com/dogumekanik21/"><i class="fab fa-instagram"></i></a>
-                        
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
-                
+                <!-- Hızlı Linkler -->
                 <div class="footer-col">
-                   <h4> Hakkımızda</h4>
-                   <p>
-                    Doğu Mekanik Malzemeleri Sanayi ve Ticaret Limited Şirketi kuruluşundan bu yana malzeme tedariği konusunda göstermiş olduğu müşteri hassasiyeti, dürüstlük ve güven çerçevesi içerisinde yaptığı işlerde başarı ve istikrar çıtasını herzaman bir üst seviyeye taşımıştır.</p>
+                    <h4>Hızlı Linkler</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Ana Sayfa</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Ürünler</a></li>
+                        <li><a href="#">Projeler</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ürünler -->
+                <div class="footer-col">
+                    <h4>Ürünler</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Elektrik Malzemeleri</a></li>
+                        <li><a href="#">Otomasyon Sistemleri</a></li>
+                        <li><a href="#">Aydınlatma</a></li>
+                        <li><a href="#">Güvenlik Sistemleri</a></li>
+                        <li><a href="#">Kablo ve Aksesuarlar</a></li>
+                    </ul>
                 </div>
 
                 <!-- İletişim -->

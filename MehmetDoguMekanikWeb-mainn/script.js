@@ -139,8 +139,70 @@ document.getElementById("kurumsalMenu").addEventListener("click", function(event
     const menuWindow = document.querySelector('.menu-window');
     menuWindow.classList.toggle('show');  // Menü açma/kapama
 }
+document.addEventListener("DOMContentLoaded", function () {
 
+    const details = {
+        betonerme: {
+            title: "Betonerme Malzemeleri",
+            image: "images/leo1.jpg",
+            description: "Betonarme yapılar için gerekli olan temel malzemeler hakkında detaylı bilgi."
+        },
+        yapikimyasallari: {
+            title: "Yapı Kimyasalları",
+            image: "images/leo1.jpg",
+            description: "İnşaatlarda kullanılan su yalıtımı, beton katkıları ve diğer kimyasallar."
+        },
+        insaat: {
+            title: "İnşaat Ekipmanları",
+            image: "images/leo1.jpg",
+            description: "Şantiyelerde kullanılan vinçler, iskeleler ve diğer ekipmanlar."
+        },
+        konteyner: {
+            title: "Konteyner",
+            image: "images/leo1.jpg",
+            description: "Taşınabilir yaşam ve ofis alanları için konteyner çözümleri."
+        }
+    };
 
+    const detailCard = document.getElementById("detail-card");
+
+    // İncele butonlarına tıklanınca detayları aç
+    document.querySelectorAll(".promo-button").forEach(button => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = this.getAttribute("data-target");
+
+            if (details[target]) {
+                document.getElementById("detail-title").textContent = details[target].title;
+                document.getElementById("detail-image").src = details[target].image;
+                document.getElementById("detail-description").textContent = details[target].description;
+
+                detailCard.style.display = "flex";
+                setTimeout(() => {
+                    detailCard.classList.add("show");
+                }, 50);
+            }
+        });
+    });
+
+    // Kapatma butonuna tıklanınca detayları kapat
+    document.querySelector(".close-btn").addEventListener("click", function () {
+        detailCard.classList.remove("show");
+        setTimeout(() => {
+            detailCard.style.display = "none";
+        }, 100);
+    });
+
+    // Pencerenin dışına tıklayınca kartı kapat
+    detailCard.addEventListener("click", function (e) {
+        if (e.target === this) {
+            detailCard.classList.remove("show");
+            setTimeout(() => {
+                detailCard.style.display = "none";
+            }, 100);
+        }
+    });
+});
 
   
 
