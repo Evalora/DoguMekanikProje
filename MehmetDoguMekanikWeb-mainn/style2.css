@@ -1,0 +1,117 @@
+/* Ana Sayfa - Proje Listesi */
+.project-list {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.project-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Proje Detay Sayfası */
+.project-details {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.project-description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.project-text {
+    flex: 1;
+    padding-right: 20px;
+    min-width: 300px;
+}
+
+.project-text h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.project-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 500px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .project-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-text {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .project-btn {
+        width: 100%;
+    }
+}
