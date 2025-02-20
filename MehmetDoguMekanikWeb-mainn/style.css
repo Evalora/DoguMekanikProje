@@ -1719,14 +1719,13 @@ body {
         flex-direction: column; /* Küçük ekranlarda her kart bir altına yerleşir */
     }
 }
-
-
+/* Genel Kart Tasarımı */
 .promo-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1329px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1738,27 +1737,12 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .promo-card-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.promo-card-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.promo-card-item:hover::before {
-    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .promo-card-item h3 {
@@ -1768,36 +1752,85 @@ body {
     color: #e9ecef;
 }
 
-.promo-card-item p {
-    font-size: 16px;
-    margin-bottom: 25px;
-    opacity: 0.9;
-}
-
 .promo-button {
     display: inline-block;
     padding: 12px 30px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .promo-button:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
 }
 
-/* Responsive Tasarım */
-@media (max-width: 1200px) {
-    .promo-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Detay Kartı Tasarımı */
+.detail-card {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
+.detail-card.show {
+    opacity: 1;
+}
+
+.detail-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+}
+
+.detail-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.detail-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.detail-content p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Kapatma Butonu */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Responsive Tasarım */
 @media (max-width: 768px) {
     .promo-cards {
         grid-template-columns: 1fr;
@@ -1811,14 +1844,11 @@ body {
         font-size: 20px;
     }
     
-    .promo-card-item p {
-        font-size: 14px;
-    }
-    
     .promo-button {
         padding: 10px 25px;
     }
 }
+
 
 .section-header {
     padding: 60px 0 40px 0;
